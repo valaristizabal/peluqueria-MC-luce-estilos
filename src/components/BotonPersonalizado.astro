@@ -1,0 +1,18 @@
+---
+const {buttonText, rutaNavegar} = Astro.props;
+---
+
+<a href={rutaNavegar} class="button">{buttonText}</a>
+
+<style>
+    .button {
+    display: inline-block;
+    background-color: #E04782;
+    justify-self: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+    max-width: max-content;
+}
+</style>

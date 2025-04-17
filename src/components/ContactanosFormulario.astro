@@ -1,0 +1,62 @@
+---
+import BotonPersonalizado from "./BotonPersonalizado.astro";
+---
+<form class="contactanos_form">
+  <div class="contactanos_inputs">
+    <input type="email" name="email" placeholder="Ingresa tu correo electrónico" class="contactanos_input correo_input" required/>
+    <textarea name="message" placeholder="Ingresa tu mensaje" class="contactanos_input mensaje_textarea" required></textarea>
+    <button type="submit" class="contactanos_boton">Enviar</button>
+  </div>
+</form>
+
+<style>
+    .contactanos_form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .contactanos_inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .contactanos_input {
+        border: 2px solid #d62270;
+        background-color: #fff;
+        padding: 12px 15px;
+        border-radius: 8px;
+        font-size: 1rem;
+        outline: none;
+        width: 100%;
+        transition: box-shadow 0.2s;
+    }
+
+    .contactanos_input:focus {
+        box-shadow: 0 0 0 2px rgba(214, 34, 112, 0.3);
+    }
+
+    .mensaje_textarea {
+        height: 150px;
+        padding-top: 15px;
+        text-align: left;
+        resize: vertical;
+    }
+    .contactanos_boton {
+        margin: 0 auto;
+        display: inline-block;
+        border: none;
+        background-color: #E04782;
+        justify-self: center;
+        color: #fff;
+        text-decoration: none;
+        padding: 13px 30px;
+        border-radius: 32px;
+        max-width: max-content;
+        cursor: pointer;
+    }
+</style>

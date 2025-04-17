@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.2"
+    "astro": "^5.7.2",
+    "latest": "file:",
+    "photoswipe": "^5.4.4",
+    "swiper": "^11.2.6"
   }
 }

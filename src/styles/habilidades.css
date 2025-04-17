@@ -1,0 +1,25 @@
+.habilidades{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.habilidades_main{
+    display: grid; 
+    gap: 1em;    
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.habilidades_title {
+    color: #D62270;
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+
+.habilidades_paragraph {
+    line-height: 1.7;
+}

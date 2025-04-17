@@ -1,0 +1,62 @@
+---
+import Testimonio from "./Testimonio.astro";
+---
+
+<!-- Contenedor principal de Swiper -->
+<div class="swiper">
+    <!-- Wrapper adicional requerido -->
+    <div class="swiper-wrapper">
+        <!-- Los slides -->
+
+        <Testimonio title="Portafolio de trabajos" 
+                    titleSpan="Alizado con cepillado." 
+                    review="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!" 
+                    src="/images/portafolio-peinado-personalizado.png" />
+
+        <Testimonio title="Portafolio de trabajos" 
+        titleSpan="Alizado con cepillado." 
+        review="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!" 
+        src="/images/2.png" />
+
+        <Testimonio title="Portafolio de trabajos" 
+        titleSpan="Alizado con cepillado." 
+        review="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!" 
+        src="/images/3.png" />
+
+        <Testimonio title="Portafolio de trabajos" 
+        titleSpan="Alizado con cepillado." 
+        review="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!" 
+        src="/images/4.png" />
+    </div>
+
+    <!-- Botones de navegación -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+</div>
+
+<script>
+  // Core de Swiper y estilos
+  import Swiper from 'swiper';
+  import 'swiper/css';
+  // Módulo Navigation de Swiper y estilos
+  import { Navigation } from "swiper/modules";
+  import "swiper/css/navigation";
+
+  // Configurar Swiper
+  const swiper = new Swiper(".swiper", {
+    modules: [Navigation], // definir los módulos a usar
+    loop: true,            // definir si los slides estarán en bucle
+    slidesPerView: 1,      // agregar número de slides para la pantalla
+    spaceBetween: 40,      // separación entre slides en px
+    navigation: {          // definir botones next y prev para el módulo Navigation
+      prevEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
+    }
+  });
+</script>
+<style>
+    .swiper-button-prev, .swiper-button-next{
+      padding: 0 100px;
+      color: white;
+    }
+</style>

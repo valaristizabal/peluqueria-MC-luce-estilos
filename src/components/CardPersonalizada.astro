@@ -1,0 +1,25 @@
+---
+const { src, title, paragraph } = Astro.props;
+---
+
+<article class="habilidades_card">
+    <img src={src} class="habilidades_card_icon">
+    <h3 class="habilidades_card__title">{title}</h3>
+    <p class="habilidades_card__paragrah">{paragraph}</p>
+</article>
+
+<style>
+    .habilidades_card{
+        display: grid;
+        gap: 1em;
+        justify-items: center;
+        width: 360px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    
+    .habilidades_card_icon{
+        width: 40px;
+    }
+    
+</style>

@@ -1,0 +1,50 @@
+---
+const {title, titleSpan, review, src } = Astro.props;
+---
+
+
+<div class="swiper-slide">
+    <div class="portafolio_content">
+        <h2 class="subtitle">{title} <br><span class="portafolio_course">{titleSpan}</span></h2>
+        <p class="portafolio_text">{review}</p>
+    </div>
+    <img src={src} class="portafolio_img" alt="" />
+</div>
+
+
+<style>
+    .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 5rem;
+    }
+  
+    .portafolio_content {
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem; 
+    }
+    .portafolio_content h2{
+      color: #D62270;
+      font-size: 2rem;
+    }
+  
+    .portafolio_img {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+    }
+  
+    .portafolio_text {
+      font-size: 1rem;
+    }
+  
+    .portafolio_course {
+      color: #fff;
+      padding: 5px 10px;
+      display: inline-block;
+    }
+</style>
+  

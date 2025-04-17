@@ -1,11 +1,82 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+	---
+	import BotonPersonalizado from "../components/BotonPersonalizado.astro";
+	import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
+	import "../styles/navbar.css";
+	import "../styles/habilidades.css";
+	import "../styles/portafolio.css";
+	import "../styles/preguntas.css";
+	import "../styles/contactanos.css";
+	import CardPersonalizada from "../components/CardPersonalizada.astro";
+	import Testimonio from "../components/Testimonio.astro";
+	import Galeria from "../components/Galeria.astro";
+	import Pregunta from "../components/Pregunta.astro";
+	import ContactanosFormulario from "../components/ContactanosFormulario.astro";
+	---
+	<Layout title="MC Luce Estilos.">	
+		<section class="home" id="home">
+			<header>
+			<!-- Logo -->
+			<nav class="nav">
+				<div class="nav_div_logo">
+					<img src="/images/MC icon.png" class="nav_div_logo_img" alt="Logo">
+				</div>
 
-<Layout>
-	<Welcome />
-</Layout>
+				<ul class="nav_ul nav_ul_menu">
+					<li class="nav_items">
+						<a href="#home" class="nav_links">Home</a>
+					</li>
+					<li class="nav_items">
+						<a href="#habilidades" class="nav_links">Habilidades</a>
+					</li>
+					<li class="nav_items">
+						<a href="#portafolio" class="nav_links">Portafolio</a>
+					</li>
+					<li class="nav_items">
+						<a href="#preguntas-frecuentes" class="nav_links">Preguntas frecuentes</a>
+					</li>
+					<li class="nav_items">
+						<a href="#contactanos" class="nav_links">Contactanos</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+			<div class="home_container">
+				<h1 class="home_title">Bienvenidos a MC Luce Estilos</h1>
+				<p class="home_paragraph">Transformo tu look con técnica, pasión y un toque personalizado que realza tu belleza y confianza. Trabajo con citas para darte la atención exclusiva que mereces.</p>
+				<BotonPersonalizado buttonText="Contactanos" rutaNavegar="#contactanos"/>
+			</div>
+		</section>
+		<section class="habilidades" id="habilidades">
+			<h2 class="habilidades_title">Habilidades técnicas</h2>
+			<p class="habilidades_paragraph">Transformo tu look con técnica, pasión y un toque personalizado que realza tu belleza y confianza. Trabajo con citas para darte la atención exclusiva que mereces.</p>
+			<div class="habilidades_main">
+				<CardPersonalizada src="/images/cuidado-del-cabello.png" title="Colorimetría" paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore porro eius facilis?"/>
+				<CardPersonalizada src="/images/alisar-el-cabello.png" title="Alizados" paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore porro eius facilis?"/>
+				<CardPersonalizada src="/images/tratamiento-capilar.png" title="Repolonización" paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore porro eius facilis?"/>
+			</div>
+			<div class="habilidades_main">
+				<CardPersonalizada src="/images/corte-de-pelo.png" title="Cortes de cabello" paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore porro eius facilis?"/>
+				<CardPersonalizada src="/images/barberia.png" title="Barbería" paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore porro eius facilis?"/>
+				<CardPersonalizada src="/images/peine.png" title="Peinados" paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae tempore porro eius facilis?"/>
+			</div>
+		</section>
+		<section class="portafolio" id="portafolio">
+			<div class="portafolio_container swiper-wrapper" id="my-slider">
+				<Galeria/>
+			</div>
+		</section>
+		<section class="preguntas_frecuentes" id="preguntas-frecuentes">
+			<h2 class="preguntas_frecuentes_title">Preguntas frecuentes</h2>
+			<p>Sabemos que antes de un cambio de look o tratamiento, pueden surgir preguntas sobre como trabajamos. Por eso, hemos reunido las más comunes que nos hacen nuestros clientes, para que se sientan seguros e informados. Si tienes otra duda, no dudes en contactarnos. ¡Estamos para asesorarte!</p>
+			<section class="preguntas_frecuentes_container">
+				<Pregunta pregunta="¿Tienes servicio a domicilio?" respuesta="¡Sí! Ofrezco servicio a domicilio en ciertas zonas, ideal para eventos o clientes que prefieren la comodidad de su casa. Solo necesitas agendar con anticipación."/>
+				<Pregunta pregunta="¿Cada cuánto tiempo debería venir a cortarme el cabello?", respuesta="Lo ideal es cada 6 a 8 semanas para mantener la forma y sanear puntas. Si tienes un estilo más definido (como un bob o un flequillo), puede ser cada 4 semanas."/>
+				<Pregunta pregunta="¿Tienes disponibilidad por cita o atiendes sin cita previa?", respuesta="Trabajo principalmente con citas para poder darte una atención personalizada y sin apuros, pero si tengo disponibilidad en el momento, también puedo atenderte."/>
+			</section>
+		</section>
+		<section class="contactanos" id ="contactanos">
+			<h2 class="contactanos_title">Contacta con nosotros</h2>
+			<ContactanosFormulario/>
+		</section>
+	</Layout>
